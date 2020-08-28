@@ -51,7 +51,7 @@
       @guest
       <li class="navbar-item dropdown">
         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-              User
+              Guest
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background: #555; position: absolute; translate: -5rem;">
           <a class="dropdown-item" style="" href="{{ route('login') }}">{{ __('Login') }}</a>

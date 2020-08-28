@@ -50,6 +50,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception->getStatusCode() == 403) {
+            return back();
+        }
         return parent::render($request, $exception);
     }
 }
