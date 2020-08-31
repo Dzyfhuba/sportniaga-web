@@ -14,7 +14,7 @@ class CreateItemsTable extends Migration
     public function up()
     {
         Schema::create('items', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('file');
             $table->string('club');
             $table->string('type');
@@ -22,6 +22,7 @@ class CreateItemsTable extends Migration
             $table->string('gk');
             $table->string('size');
             $table->string('material');
+            $table->string('price');
             $table->timestamps();
         });
     }

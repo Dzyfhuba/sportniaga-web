@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Item;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class Adm00nUploadController extends Controller
 {
@@ -22,6 +22,7 @@ class Adm00nUploadController extends Controller
     		'gk' => 'required',
     		'size' => 'required',
     		'material' => 'required',
+            'price' => 'required',
     	]);
 
     	$file = $request->file('file');
@@ -36,7 +37,8 @@ class Adm00nUploadController extends Controller
     		'year' => $request->year,
     		'gk' => $request->gk,
     		'size' => $request->size,
-    		'material' => $request->material,
+    		'material' => ucwords($request->material),
+            'price' => $request->price,
     	]);
 
     	return redirect()->back();
@@ -44,6 +46,7 @@ class Adm00nUploadController extends Controller
 
     public function delete($id){
     	$item = Item::find($id);
+        File::delete('data_file/'.$item->file);
     	$item->delete();
     	return redirect('/adm00n');
     }

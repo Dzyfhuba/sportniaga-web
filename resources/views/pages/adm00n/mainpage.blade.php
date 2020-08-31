@@ -72,12 +72,16 @@
 				<label for="mtrl" class="col-form-label col-4">Bahan:</label>
 				<input type="text" id="material" placeholder="Bahan" class="form-control col" name="material" required>
 			</div>
+			<div class="form-group row">
+				<label for="prc" class="col-form-label col-4">Harga:</label>
+				<input type="text" id="price" placeholder="Harga" class="form-control col" name="price" required>
+			</div>
 			<div class="text-center">
 				<input type="submit" class="btn btn-primary" value="Submit">
 			</div>	
 		</form>
 	</div>
-	<div class="col">
+	<div class="col" style="overflow-x: auto;">
 		{{ $item->links() }}
 		<table class="table-responsive table-bordered table-striped">
 			<thead class="text-center">
@@ -89,6 +93,7 @@
 					<th>Kiper</th>
 					<th>Ukuran</th>
 					<th>Bahan</th>
+					<th>Harga</th>
 					<th width="1%">Opsi</th>
 				</tr>
 			</thead>
@@ -102,7 +107,11 @@
 					<td>{{ $i->gk }}</td>
 					<td>{{ $i->size }}</td>
 					<td>{{ $i->material }}</td>
-					<td><a href="/adm00n/delete/{{ $i->id }}">Hapus</a></td>
+					<td>{{ $i->price }}</td>
+					<td>
+							<button type="button" class="btn btn-danger btn-block" href="/adm00n{{-- /delete/{{ $i->id }} --}}">Edit</button>
+							<button type="button" class="btn btn-success btn-block" href="/adm00n/delete/{{ $i->id }}">Hapus</button>
+					</td>
 				</tr>
 				@endforeach
 			</tbody>
