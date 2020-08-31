@@ -55,7 +55,7 @@
     </ul>
 		</nav>
 	</header>
-	<div id="main" class="row-cols-3 container">
+	<div id="main" class="row-cols-3 container-fluid p-3">
 		@yield('content')
 	</div>
 </body>

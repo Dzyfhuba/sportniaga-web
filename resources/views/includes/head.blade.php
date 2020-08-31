@@ -22,4 +22,8 @@
 	.dropdown-menu > a, .dropdown-item > a{
 		color: #bbb;
 	}
+
+	.modal-backdrop{
+		position: unset !important;
+	}
 </style>

@@ -16,17 +16,17 @@
       <li class="nav-item{{ request()->is('jerseyfutsal') ? ' active' : '' }}">
         <a class="nav-link" href="/jerseyfutsal">Jersey Futsal</a>
       </li>
-      <li class="nav-item{{ request()->is('sepatubola') ? ' active' : '' }}">
+      {{-- <li class="nav-item{{ request()->is('sepatubola') ? ' active' : '' }}">
         <a class="nav-link" href="/sepatubola">Sepatu Bola</a>
       </li>
       <li class="nav-item{{ request()->is('sepatufutsal') ? ' active' : '' }}">
         <a class="nav-link" href="/sepatufutsal">Sepatu Futsal</a>
-      </li>
+      </li> --}}
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     </form>
-    <button type="button" class="btn btn-info" data-toggle="modal" data-keyboard="true" data-target="#cart-modal" style="width: 20px; height: 20px; padding: 18px; margin: 0 10px; background: url('images/cart.png'); background-size: 38px;  border: none;">
+    <button type="button" class="" data-toggle="modal" data-keyboard="true" data-target="#cart-modal" style="width: 20px; height: 20px; padding: 18px; margin: 0 10px; background: url('images/cart.png'); background-size: 38px;  border: none;">
       {{-- <img src="images/cart.png" style="width: inherit; height: inherit;"> --}}
     </button>
     <ul class="navbar-nav">
