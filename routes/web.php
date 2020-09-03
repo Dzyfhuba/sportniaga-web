@@ -62,6 +62,8 @@ Route::group(['middleware' => ['role:admin']], function(){
 	Route::get('/adm00n', 'Adm00nUploadController@upload')->name('admin');
 	Route::post('/adm00n/process', 'Adm00nUploadController@upload_process');
 	Route::get('/adm00n/delete/{id}', 'Adm00nUploadController@delete');
+	Route::get('/adm00n/edit/{id}', 'Adm00nUploadController@edit');
+	Route::put('/adm00n/update/{id}', 'Adm00nUploadController@update');
 });
 
 Route::group(['middleware' => ['role:user|admin']], function(){

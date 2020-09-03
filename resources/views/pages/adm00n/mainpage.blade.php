@@ -109,8 +109,8 @@
 					<td>{{ $i->material }}</td>
 					<td>{{ $i->price }}</td>
 					<td>
-							<button type="button" class="btn btn-danger btn-block" href="/adm00n{{-- /delete/{{ $i->id }} --}}">Edit</button>
-							<button type="button" class="btn btn-success btn-block" href="/adm00n/delete/{{ $i->id }}">Hapus</button>
+						<a type="button" class="btn btn-danger btn-block" href="/adm00n/edit/{{ $i->id }}">Edit</a>
+						<a type="button" class="btn btn-success btn-block" href="/adm00n/delete/{{ $i->id }}">Hapus</a>
 					</td>
 				</tr>
 				@endforeach
