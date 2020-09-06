@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home');
+        $preview = Item::inRandomOrder()->limit(5)->get();
+        return view('pages.home', [
+            'preview' => $preview,
+        ]);
     }
 }

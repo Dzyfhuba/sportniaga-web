@@ -16,13 +16,11 @@
 				@yield('category')
 			</div>
 		</div>
-		@yield('jerseybola')
+		<div class="row">
+			@yield('jerseybola')
+		</div>
 		@yield('content')
 	</div>
-	<div class="row">
-		<footer class="footer">
-			@include('includes.footer')
-		</footer>
-	</div>
+	@include('includes.footer')
 </body>
 </html>
