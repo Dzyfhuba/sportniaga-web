@@ -25,8 +25,43 @@ class HomeController extends Controller
     public function index()
     {
         $preview = Item::inRandomOrder()->limit(5)->get();
+
+        $category = array(
+            "aaaa",
+            "bbbb",
+            "cccc",
+            "dddd",
+            "eeee",
+            "aaaa",
+            "bbbb",
+            "cccc",
+            "dddd",
+            "eeee",
+            "aaaa",
+            "bbbb",
+            "cccc",
+            "dddd",
+            "eeee",
+            "aaaa",
+            "bbbb",
+            "cccc",
+            "dddd",
+            "eeee",
+            "aaaa",
+            "bbbb",
+            "cccc",
+            "dddd",
+            "eeee",
+            "aaaa",
+            "bbbb",
+            "cccc",
+            "dddd",
+            "eeee",
+        );
+
         return view('pages.home', [
             'preview' => $preview,
+            'category' => $category,
         ]);
     }
 }

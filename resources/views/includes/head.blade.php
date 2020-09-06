@@ -26,4 +26,34 @@
 	.modal-backdrop{
 		position: unset !important;
 	}
+
+	@media only screen and (max-width: 576px){
+		#category{
+			width: 22.2vw;
+			height: 22.2vw;
+		}
+		.grid{
+			align-items: center;
+			display: flex;
+			height: 25.5vw;
+			overflow-y: hidden;
+		}
+		.column{
+			
+		}
+	}
+
+	@media only screen and (min-width: 576px){
+		#category{
+			width: 6vw;
+			height: 6vw;
+		}
+		.grid{
+			text-align: center;
+		}
+		.column{
+			display: inline-block;
+			text-align: center;
+		}
+	}
 </style>
